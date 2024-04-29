@@ -1,0 +1,34 @@
+#! /bin/sh
+#
+#  ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗██████╗  ██████╗
+#  ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║██╔══██╗██╔════╝
+#  ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║██████╔╝██║
+#  ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║██╔══██╗██║
+#  ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║██║  ██║╚██████╗
+#  ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
+#	-PAD- 
+#
+
+
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+feh --bg-fill $HOME/Pictures/Wallpapers/111.jpg &
+
+$HOME/ .config/polybar/launch.sh &
+xsetroot -cursor_name left_ptr &
+picom &
+
+bspc monitor -d I II III IV V
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.58
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
