@@ -21,7 +21,7 @@ super + alt + {q,r}
 #|||----- Applications -----|||##
 
 # open terminal
-super + t
+super + Return
 	alacritty
 
 # program launcher
@@ -38,6 +38,9 @@ super + d
 super + {_,shift + }c
 	bspc node -{c,k}
 
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
 
 
 
@@ -54,9 +57,6 @@ super + m
 super + y
 	bspc node newest.marked.local -n newest.!automatic.local
 
-# swap the current node and the biggest window
-super + g
-	bspc node -s biggest.window
 
 #|||----- System Keybindings -----|||#
 
@@ -69,7 +69,7 @@ super + {t,shift + t,s,f}
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-
+###################
 # focus the next/previous window in the current desktop
 super + {_,shift + } tab
 	bspc node -f {next,prev}.local.!hidden.window
@@ -82,6 +82,20 @@ Print
 Shift + Print
     scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/screenshots && mv $f ~/screenshots && xclip -selection clipboard -t image/png -i ~/screenshots/`ls -1 -t ~/screenshots | head -1`'
 
+# volume control
+XF86AudioRaiseVolume
+	pactl set-sink-volume 0 +5%
+XF86AudioLowerVolume
+	pactl set-sink-volume 0 -5%
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+
+
+# brightness control
+XF86MonBrightnessUp 
+	xbacklight -inc 10
+XF86MonBrightnessDown 
+	xbacklight -dec 10
 
 
 
