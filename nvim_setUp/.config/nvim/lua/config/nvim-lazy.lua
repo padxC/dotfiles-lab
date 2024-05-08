@@ -1,6 +1,6 @@
-require("xPAD.config.keymaps")
-require("xPAD.config.options")
-require("xPAD.config.autocmds")
+require("config.keymaps")
+require("config.options")
+require("config.autocmds")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then

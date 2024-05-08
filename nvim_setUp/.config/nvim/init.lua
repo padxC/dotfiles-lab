@@ -1,1 +1,1 @@
-require("xPAD.config")
+require("config.nvim-lazy")
