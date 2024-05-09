@@ -14,12 +14,12 @@ local config = function()
 		pickers = {
 			find_files = {
 				theme = "dropdown",
-				previewer = false,
-				hidden = true,
+				previewer = true,
+				hidden = false,
 			},
 			live_grep = {
 				theme = "dropdown",
-				previewer = false,
+				previewer = true,
 			},
 			buffers = {
 				theme = "dropdown",

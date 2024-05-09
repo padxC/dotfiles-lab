@@ -1,8 +1,8 @@
 ---===---
 local opt = vim.opt
 
--- appearance
-opt.nu = true -- enable line numbers
+-- scrolling
+opt.number = true -- enable line numbers
 opt.relativenumber = true -- relative line numbers
 opt.scrolloff = 10
 --opt.guicursor =
@@ -11,7 +11,7 @@ opt.scrolloff = 10
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 2
-vim.opt.expandtab = true -- convert tabs to spaces
+opt.expandtab = true -- convert tabs to spaces
 opt.smartindent = true
 opt.autoindent = true -- copy indent from current line when starting new one
 opt.wrap = false -- let the line go, stop initializing new line when get out of view
