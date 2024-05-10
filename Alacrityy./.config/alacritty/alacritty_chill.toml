@@ -1,0 +1,13 @@
+[colors.bright]
+black = "0x969896"
+blue = "0xb4b7b4"
+cyan = "0xa3685a"
+green = "0x282a2e"
+magenta = "0xe0e0e0"
+red = "0xde935f"
+white = "0xffffff"
+yellow = "0x373b41"
+
+[colors.cursor]
+cursor = "0xc5c8c6"
+text = "0x1d1f21"

@@ -14,7 +14,7 @@ local config = function()
 		pickers = {
 			find_files = {
 				theme = "dropdown",
-				previewer = true,
+				previewer = false,
 				hidden = false,
 			},
 			live_grep = {
