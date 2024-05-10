@@ -1,1 +1,0 @@
-echo "FROM BASH_PROFILE"
