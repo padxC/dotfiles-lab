@@ -1,12 +1,15 @@
-return {
+--M for module
+local M = {
 	-- colorscheme
 	"rebelot/kanagawa.nvim",
 	--immediately settup
 	lazy = false,
 	priority = 1000,
-	config = function()
-		vim.cmd("colorscheme kanagawa-wave")
-	end,
 }
 
+function M.config()
+		vim.cmd.colorscheme "kanagawa-wave"
+end
+
+return M
 --
