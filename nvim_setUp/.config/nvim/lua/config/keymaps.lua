@@ -16,3 +16,10 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "n", "nzzzv") -- center next-searching 
 keymap.set("n", "N", "nzzzv")
 
+-- paste our contents without replace what’s in the register
+keymap.set("x", "<leader>p", "\"_dP", { desc = "Paste without updating register" })
+
+-- keep indenting or outdenting without needing to reselect
+keymap.set("v", "<", "<gv", { desc = "Stay in visual mode during outdent" })
+keymap.set("v", ">", ">gv", { desc = "Stay in visual mode during indent" })
+
