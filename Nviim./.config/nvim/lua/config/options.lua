@@ -4,7 +4,7 @@ local opt = vim.opt
 -- scrolling & appearance
 opt.number = true -- enable line numbers
 opt.relativenumber = true -- relative line numbers
-opt.scrolloff = 8 
+opt.scrolloff = 8
 opt.signcolumn = "yes"
 opt.colorcolumn = "80"
 --opt.guicursor = " "

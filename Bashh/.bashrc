@@ -3,7 +3,6 @@
 ###=================###
 
 
-
 shopt -s autocd # cd directly into the directory namea.
 
 ###==HISTORY==###
@@ -26,15 +25,13 @@ alias grep="grep --color=auto" # color grep - highlight desired sequence
 
 
 ###==PROMPTS==###
-export PS1='\[\e[38;5;133;2;3m\]\w\[\e[0m\] \[\e[38;5;210;1;2;3m\]\\$\[\e[0m\] \[\e[38;5;203;1;2;3m\]pad\[\e[38;5;132m\].\[\e[38;5;66m\]!\[\e[38;5;132m\]!\[\e[0m\] \[\e[38;5;240;1;2;3m\]~\[\e[0m\] '
+#export PS1='\[\e[38;5;133;2;3m\]\w\[\e[0m\] \[\e[38;5;210;1;2;3m\]\\$\[\e[0m\] \[\e[38;5;203;1;2;3m\]pad\[\e[38;5;132m\].\[\e[38;5;66m\]!\[\e[38;5;132m\]!\[\e[0m\] \[\e[38;5;240;1;2;3m\]~\[\e[0m\] '
+export PS1='\[\e[38;5;169;2;3m\]\w\[\e[22;23m\].\[\e[0m\] \[\e[38;5;178;1;3m\]\\$\[\e[0;38;5;135m\]_\[\e[38;5;203;3m\]pad.\[\e[0m\] \[\e[38;5;138;1;2;3m\]*\[\e[38;5;172m\]~\[\e[38;5;250m\].\[\e[0m\] '
+
+
 ###==VIM==###
 set -o vi # vim mode
 
-# keybinds
-bind -m vi-command '"$":end-of-line'
-bind -m vi-command '"_":beginning-of-line'
-bind -m vi-command 'i:vi-editing-mode'
-bind -m vi-command 'a:vi-append-mode'
 
 ###=================###
 

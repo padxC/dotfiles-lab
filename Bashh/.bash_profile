@@ -1,1 +1,6 @@
-echo "FROM BASH_PROFILE"
+
+
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
+

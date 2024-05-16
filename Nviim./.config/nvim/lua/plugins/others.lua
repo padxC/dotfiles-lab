@@ -1,8 +1,8 @@
 -- others
 local M = {
+  "nvim-lua/plenary.nvim",
   "nvim-tree/nvim-web-devicons",
   "ThePrimeagen/vim-be-good",
-  "nvim-lua/plenary.nvim",
   event = "VeryLazy",
 }
 
