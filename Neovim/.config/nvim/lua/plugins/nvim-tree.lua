@@ -5,10 +5,8 @@ local M = {
 }
 
 function M.config()
-  local wk = require "which-key"
-  wk.register {
-    ["<leader>e"] = { "<cmd>NvimTreeToggle<CR>", "[E]xplorer" },
-  }
+  -- Directly set the key mappings without which-key
+  vim.api.nvim_set_keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { noremap = true, silent = true, desc = "[E]xplorer" })
 
   local icons = require "plugins.icons"
 

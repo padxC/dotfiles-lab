@@ -5,22 +5,15 @@ local M = {
 }
 
 function M.config()
-  local wk = require "which-key"
-  wk.register {
-    ["<leader>sb"] = { "<cmd>Telescope buffers previewer=false<cr>", "[S]earch Buffers" },
-    ["<leader>sf"] = { "<cmd>Telescope find_files<cr>", "[S]earch Files" },
-    ["<leader>sw"] = { "<cmd>Telescope live_grep<cr>", "[S]earch Words" },
-    ["<leader>sh"] = { "<cmd>Telescope help_tags<cr>", "[S]earch Helps" },
-    ["<leader>sr"] = { "<cmd>Telescope oldfiles<cr>", "[S]earch [R]ecent Files" },
-    ["<leader>sd"] = { "<cmd>Telescope dianostics<cr>", "[S]earch [R]ecent Files" },
-    --["<leader>fb"] = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-    --["<leader>fc"] = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-    --["<leader>fp"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-  }
+  -- Key mappings for Telescope
+  vim.api.nvim_set_keymap("n", "<leader>sb", "<cmd>Telescope buffers previewer=false<cr>", { noremap = true, silent = true, desc = "[S]earch Buffers" })
+  vim.api.nvim_set_keymap("n", "<leader>sf", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true, desc = "[S]earch Files" })
+  vim.api.nvim_set_keymap("n", "<leader>sg", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true, desc = "[S]earch Words" })
+  vim.api.nvim_set_keymap("n", "<leader>sh", "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true, desc = "[S]earch Helps" })
+  vim.api.nvim_set_keymap("n", "<leader>sr", "<cmd>Telescope oldfiles<cr>", { noremap = true, silent = true, desc = "[S]earch [R]ecent Files" })
 
   local icons = require "plugins.icons"
   local actions = require "telescope.actions"
-
 
   require("telescope").setup {
     defaults = {
@@ -42,16 +35,9 @@ function M.config()
         "--hidden",
         "--glob=!.git/",
       },
-
       mappings = {
         i = {
-          ["<C-n>"] = actions.move_selection_next,
-          ["<C-p>"] = actions.move_selection_previous,
-        },
-        n = {
           ["<C-c>"] = actions.close,
-          ["j"] = actions.move_selection_next,
-          ["k"] = actions.move_selection_previous,
         },
       },
     },
@@ -59,56 +45,45 @@ function M.config()
       live_grep = {
         theme = "dropdown",
       },
-
       grep_string = {
         theme = "dropdown",
       },
-
       find_files = {
         theme = "dropdown",
         previewer = false,
       },
-
       buffers = {
         theme = "dropdown",
         previewer = false,
         initial_mode = "normal",
         mappings = {
-          i = {
-            ["<C-d>"] = actions.delete_buffer,
+          i = { -- delete buffer
+            ["<dd>"] = actions.delete_buffer,
           },
           n = {
-            ["dd"] = actions.delete_buffer,
-            ["<C-n>"] = actions.move_selection_next,
-            ["<C-p>"] = actions.move_selection_previous,
+            ["<dd>"] = actions.delete_buffer,
           },
         },
       },
-
       planets = {
         show_pluto = true,
         show_moon = true,
       },
-
       colorscheme = {
         enable_preview = true,
       },
-
       lsp_references = {
         theme = "dropdown",
         initial_mode = "normal",
       },
-
       lsp_definitions = {
         theme = "dropdown",
         initial_mode = "normal",
       },
-
       lsp_declarations = {
         theme = "dropdown",
         initial_mode = "normal",
       },
-
       lsp_implementations = {
         theme = "dropdown",
         initial_mode = "normal",
