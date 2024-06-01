@@ -48,7 +48,6 @@ text = "#282828"
 style = "Beam"
 unfocused_hollow = false
 
-# fonts
 [font]
 size = 12
 
@@ -61,15 +60,14 @@ y = 0
 history = 10000
 multiplier = 5
 
-# window 
 [window]
-#decorations = "none"
+decorations = "none"
 startup_mode = "Windowed"
 dynamic_padding = false
-#opacity = 0.9
+opacity = 0.9
 
 [window.padding]
-x = 5
-y = 5
+x = 12
+y = 10
 
 

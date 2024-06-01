@@ -36,8 +36,8 @@ bspc config gapless_monocle      	true
 sxhkd &
 
 #picom --config $HOME/.config/picom/picom.conf &
-feh --bg-fill $HOME/Pictures/Wallpapers/111.jpg &
+feh --bg-fill $HOME/dotfiles-lab/assets/Wallpapers/chill_5.jpg &
 #$HOME/.config/polybar/launch.sh &
 
 xsetroot -cursor_name left_ptr &
-xset r rate 200 50
+xset r rate 333 33
