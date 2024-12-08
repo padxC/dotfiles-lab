@@ -35,10 +35,5 @@ set -o vi # vim mode
 
 ###=================###
 
-
-
-
-
-
-
-
+# This line fix the color mismatch when do ls command 
+export LS_COLORS=$LS_COLORS:'ow=36:'
